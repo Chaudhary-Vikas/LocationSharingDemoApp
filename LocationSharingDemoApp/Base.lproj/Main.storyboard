@@ -173,6 +173,9 @@
                                 <rect key="frame" x="277" y="72" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Liberey"/>
+                                <connections>
+                                    <action selector="addPicFromLibrery" destination="Wha-xa-d96" eventType="touchUpInside" id="9AN-El-P7I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
