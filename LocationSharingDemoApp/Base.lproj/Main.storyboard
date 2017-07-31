@@ -336,13 +336,13 @@
         <!--Location Sharing-->
         <scene sceneID="PWE-X0-2Pe">
             <objects>
-                <tableViewController id="nzx-Nd-Bj5" sceneMemberID="viewController">
+                <tableViewController id="nzx-Nd-Bj5" customClass="LocationTableViewController" customModule="LocationSharingDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jsc-Su-jLX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="exY-Pc-2U0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="exY-Pc-2U0" customClass="LocationTableViewCell" customModule="LocationSharingDemoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exY-Pc-2U0" id="bjw-IZ-C0g">
@@ -398,6 +398,10 @@
                                     <constraint firstItem="b63-CR-CGl" firstAttribute="centerY" secondItem="exY-Pc-2U0" secondAttribute="centerY" id="uFH-s8-Ub0"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="locationAddressLabel" destination="kdX-A7-w8w" id="kKH-dr-ayt"/>
+                                    <outlet property="locationNameLabel" destination="VGr-Rf-vwb" id="MDZ-ET-xd4"/>
+                                    <outlet property="locationWhether" destination="aft-2U-77J" id="ajA-iW-U97"/>
+                                    <outlet property="thumbnailImageView" destination="PeK-0f-I16" id="nFc-As-b34"/>
                                     <segue destination="5JJ-VF-DPG" kind="show" trigger="accessoryAction" id="bu3-4s-YT4"/>
                                 </connections>
                             </tableViewCell>
