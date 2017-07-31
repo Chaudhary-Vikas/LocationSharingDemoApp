@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class AddDetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddDetailsViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var imageView : UIImageView?
     @IBOutlet var name : UITextField?
@@ -58,7 +58,7 @@ class AddDetailsViewController: UIViewController, UIImagePickerControllerDelegat
         
         let tripObject = PFObject(className: "LocationDetail")
         //        tripObject.objectId = tripId
-        tripObject["city"] = city?.text
+//        tripObject["city"] = city?.text
         tripObject["address"] = address?.text
         //        tripObject["featuredImage"] = featuredImage
         tripObject["whether"] = whether?.text
@@ -68,10 +68,12 @@ class AddDetailsViewController: UIViewController, UIImagePickerControllerDelegat
         tripObject.saveInBackground(block: { (success, error) -> Void in
             if (success) {
                 print("Successfully updated the trip")
+                
             } else {
                 print("Error: \(error?.localizedDescription ?? "Unknown error"))")
             }
         })
+//        dismiss(animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
