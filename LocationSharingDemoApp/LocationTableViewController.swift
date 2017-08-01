@@ -12,7 +12,7 @@ class LocationTableViewController: UITableViewController {
 private var location = [Location]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadTripsFromParse()
+//        self.loadTripsFromParse()
 //        self.tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,6 +48,11 @@ private var location = [Location]()
             }
             self.tableView.reloadData()
         }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadTripsFromParse()
+        navigationController?.hidesBarsOnSwipe = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,6 +92,57 @@ private var location = [Location]()
         }
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showLocationDetail" {
+            
+            if let indexpath = tableView.indexPathForSelectedRow {
+                let destinationSegue = segue.destination as! ShowLocationDetailViewController
+                destinationSegue.location = location[indexpath.row]
+                
+            }
+        }
+        //        else if segue.identifier == "addRestaurent" {
+        //
+        //            if let index = tableView.indexPathForSelectedRow {
+        //            let destinationSegue = segue.destination as! AddRestaurentController
+        //            destinationSegue.restaurent = restaurants[index.row]
+        //
+        //            }
+        //        }
+    }
+override func tableView(_ tableView: UITableView, editActionsForRowAt
+        indexPath: IndexPath) -> [UITableViewRowAction]? {
+        // Social Sharing Button
+    let cell = tableView.cellForRow(at: indexPath) as! LocationTableViewCell
+//        print(cell.locationNameLabel)
+    
+        let shareAction = UITableViewRowAction(style:
+            UITableViewRowActionStyle.default, title: "Share", handler: { (action,
+                indexPath) -> Void in
+                let defaultText = "Just travelling at " + cell.locationNameLabel.text!
+                
+//                var dummyImage = UIImage()
+//                var bool = 0
+//                if let featuredImage = self.location[indexPath.row].featuredImage {
+//                    featuredImage.getDataInBackground(block: { (imageData, error) in
+//                        if let tripImageData = imageData {
+//                            bool = 1
+//                            dummyImage = UIImage(data: tripImageData)!
+//
+//                        }
+//                    })
+//                }
+//        if  bool == 1 {
+                if (cell.thumbnailImageView.image != nil) {
+        let activityController = UIActivityViewController(activityItems:
+            [defaultText, cell.thumbnailImageView.image!], applicationActivities: nil)
+        self.present(activityController, animated: true, completion: nil)
+    }
+})
+// Delete button
+                
+return [shareAction]
+}
     
 
     /*

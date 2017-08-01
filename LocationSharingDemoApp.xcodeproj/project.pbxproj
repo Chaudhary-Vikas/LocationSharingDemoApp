@@ -10,6 +10,9 @@
 		348DC6491F2F3CE500778C66 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DC6481F2F3CE500778C66 /* LocationTableViewCell.swift */; };
 		348DC64D1F2F3DF400778C66 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DC64C1F2F3DF400778C66 /* LocationTableViewController.swift */; };
 		348DC64F1F2F405000778C66 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DC64E1F2F405000778C66 /* Location.swift */; };
+		348DC6511F305C6400778C66 /* ShowLocationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DC6501F305C6400778C66 /* ShowLocationDetailTableViewCell.swift */; };
+		348DC6551F305D1C00778C66 /* ShowLocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DC6541F305D1C00778C66 /* ShowLocationDetailViewController.swift */; };
+		348DC6591F306D3700778C66 /* LocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DC6581F306D3700778C66 /* LocationMapViewController.swift */; };
 		34C1F42F1F177E5500B37CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1F42E1F177E5500B37CD3 /* AppDelegate.swift */; };
 		34C1F4311F177E5500B37CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1F4301F177E5500B37CD3 /* ViewController.swift */; };
 		34C1F4341F177E5500B37CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C1F4321F177E5500B37CD3 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		348DC6481F2F3CE500778C66 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		348DC64C1F2F3DF400778C66 /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		348DC64E1F2F405000778C66 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		348DC6501F305C6400778C66 /* ShowLocationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		348DC6541F305D1C00778C66 /* ShowLocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationDetailViewController.swift; sourceTree = "<group>"; };
+		348DC6581F306D3700778C66 /* LocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewController.swift; sourceTree = "<group>"; };
 		34C1F42B1F177E5500B37CD3 /* LocationSharingDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationSharingDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C1F42E1F177E5500B37CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C1F4301F177E5500B37CD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +165,9 @@
 				348DC6481F2F3CE500778C66 /* LocationTableViewCell.swift */,
 				348DC64C1F2F3DF400778C66 /* LocationTableViewController.swift */,
 				348DC64E1F2F405000778C66 /* Location.swift */,
+				348DC6501F305C6400778C66 /* ShowLocationDetailTableViewCell.swift */,
+				348DC6541F305D1C00778C66 /* ShowLocationDetailViewController.swift */,
+				348DC6581F306D3700778C66 /* LocationMapViewController.swift */,
 			);
 			path = LocationSharingDemoApp;
 			sourceTree = "<group>";
@@ -345,8 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348DC6511F305C6400778C66 /* ShowLocationDetailTableViewCell.swift in Sources */,
 				34C1F4311F177E5500B37CD3 /* ViewController.swift in Sources */,
 				348DC6491F2F3CE500778C66 /* LocationTableViewCell.swift in Sources */,
+				348DC6591F306D3700778C66 /* LocationMapViewController.swift in Sources */,
+				348DC6551F305D1C00778C66 /* ShowLocationDetailViewController.swift in Sources */,
 				348DC64D1F2F3DF400778C66 /* LocationTableViewController.swift in Sources */,
 				34C1F42F1F177E5500B37CD3 /* AppDelegate.swift in Sources */,
 				34C1F4371F177E5500B37CD3 /* LocationSharingDemoApp.xcdatamodeld in Sources */,
@@ -511,6 +523,7 @@
 					"$(PROJECT_DIR)/LocationSharingDemoApp/Parse",
 				);
 				INFOPLIST_FILE = LocationSharingDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = infy.LocationSharingDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,6 +541,7 @@
 					"$(PROJECT_DIR)/LocationSharingDemoApp/Parse",
 				);
 				INFOPLIST_FILE = LocationSharingDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = infy.LocationSharingDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

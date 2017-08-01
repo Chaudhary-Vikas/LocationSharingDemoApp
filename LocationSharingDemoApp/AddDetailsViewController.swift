@@ -60,7 +60,9 @@ class AddDetailsViewController: UITableViewController, UIImagePickerControllerDe
         //        tripObject.objectId = tripId
 //        tripObject["city"] = city?.text
         tripObject["address"] = address?.text
-        //        tripObject["featuredImage"] = featuredImage
+        
+        var file = PFFile(data: UIImageJPEGRepresentation((imageView?.image)!, 0.4)!)
+        tripObject["featuredImage"] = file
         tripObject["whether"] = whether?.text
         tripObject["rating"] = rating?.text
         tripObject["name"] = name?.text

@@ -31,8 +31,7 @@ struct Location {
         self.locationId = pfObject.objectId!
         self.name = pfObject["name"] as! String
         self.address = pfObject["address"] as! String
-        self.whether = "dummy"
-//        self.whether = pfObject["whether"] as! String
+        self.whether = pfObject["whether"] as! String
         self.featuredImage = pfObject["featuredImage"] as? PFFile
         self.rating = pfObject["rating"] as! String
         
